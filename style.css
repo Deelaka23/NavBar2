@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family:  'Trebuchet MS', sans-serif;
+}
+nav{
+  background-color: rgb(59, 146, 25);
+  width:100%;
+  height: 80px;
+}
+nav .logo{
+  color: aliceblue;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: inline;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80px;
+  margin: 0 50px;
+}
+nav ul{
+  float: right;
+  margin-right: 30px;
+}
+nav ul li{
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 17px;
+  line-height: 80px;
+}
+nav ul li a{
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background-color:white;
+  color: rgb(59, 146, 25);
+  transition: all 0.4s;
+}
+.liner{
+  width: 110px;
+  height: 5px;
+  margin-left: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  animation: overliner 2s linear none infinite ;
+}
+@keyframes overliner {
+  from{
+    width: 0;
+  }
+  to{
+    width: 110px;
+  }
+}
+label.checkbtn{
+  float: right;
+  font-size: 25px;
+  color: white;
+  margin-right: 15px;
+  margin-top: 28px;
+  border: 1px solid white;
+  width: 28px;
+  height: 28px;
+}
+#check{
+  display: none;
+}
+label.checkbtn:hover{
+  cursor: pointer;
+  border-color: yellow;
+}
+@media (max-width:988px){
+  .checkbtn{
+    display: block;
+  }
+  body{
+    background-color: rgb(255, 255, 255);
+  }
+  ul{
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    position: fixed;
+    width:100%;
+    height: calc(100vh - 80px);
+    right: -200%;
+    background-color: black;
+    border: 20px solid;
+    top:80px
+  }
+  #check:checked ~ ul{
+    right:  -30px;
+    transition: all 1s;
+  }
+  li{
+    display: block;
+    width:100%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    margin: none;
+  }
+  a.active,a:hover{
+    border: 1px solid white;
+    background: none;
+    color: rgb(59, 146, 25);
+    transition: all 0.4s;
+  }
+}
+section{
+  height: calc(100vh - 80px);
+  width:100%;
+  
+}
