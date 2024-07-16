@@ -98,7 +98,7 @@ label.checkbtn:hover{
     top:80px
   }
   #check:checked ~ ul{
-    right:  -30px;
+    right:  0px;
     transition: all 1s;
   }
   li{
